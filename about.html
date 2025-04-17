@@ -5,48 +5,144 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>吳奕伶簡介</title>
 
-	<!-- 引入 Noto Sans CJK 字體 -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+CJK+TC:wght@400;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 
 	<style>
+		@import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&family=Lora:ital,wght@0,400..700;1,400..700&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
 		.container {
 			position: relative;
+			height: 100vh;
+			width: 100%;
 		}
-		h1 {
+
+		.image-container {
 			position: absolute;
-			top: 185px; /* 調整文字的垂直位置 */
-			left: 18%; /* 調整文字的水平位置 */
-			transform: translateX(-50%); /* 水平居中 */
-			color: white; /* 文字顏色 */
-			font-size: 6rem; /* 字體大小 */
-			font-family: 'Noto Sans CJK TC', sans-serif; /* 使用 Noto Sans CJK 字體 */
-			z-index: 1; /* 確保文字顯示在圖片上方 */
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100vh;
+			overflow: hidden;
 		}
+
 		.image-container img {
 			width: 100%;
-			height: 87vh; /* 設定圖片的高度 */
-			object-fit: cover; /* 保持圖片比例 */
-			margin-top: 55px; /* 使圖片向下移動 */
+			height: 100vh;
+			object-fit: cover;
+		}
+
+		.nav-links {
+			position: absolute;
+			top: 15px;
+			left: 50%;
+			transform: translateX(-50%);
+			display: flex;
+			gap: 20px;
+			background: rgba(255, 255, 255, 0.7);
+			padding: 10px 20px;
+			border-radius: 10px;
+		}
+
+		.nav-links a {
+			text-decoration: none;
+			color: #9D9D9D;
+			font-size: 1.2rem;
+			font-weight: bold;
+			padding: 10px 15px;
+			border-radius: 5px;
+			transition: 0.3s;
+			font-family: "LXGW WenKai Mono TC", monospace;
+		}
+
+		.nav-links a:hover {
+			background-color: #F0F0F0;
+		}
+
+		h1 {
+			position: absolute;
+			top: 40%;
+			left: 28%;
+			transform: translate(-50%, -50%);
+			color: white;
+			font-size: 5rem;
+			font-family: 'Winky Sans', sans-serif; /* 保持標題字體為 Winky Sans */
+			z-index: 1;
+			text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+		}
+
+		footer {
+			text-align: center;
+			font-size: 1rem;
+			color: #333;
+			padding: 20px;
+			background-color: #f1f1f1;
+			position: fixed;
+			width: 100%;
+			bottom: 0;
+			font-family: "Winky Sans", sans-serif;
+		}
+
+		/* 媒體查詢 - 當螢幕寬度小於 768px 時 */
+		@media (max-width: 768px) {
+			.nav-links {
+				flex-direction: column;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+
+			h1 {
+				font-size: 4rem; /* 調整標題大小 */
+				top: 50%; /* 調整標題位置 */
+			}
+		}
+
+		/* 媒體查詢 - 當螢幕寬度小於 480px 時 */
+		@media (max-width: 480px) {
+			.nav-links a {
+				font-size: 1rem; /* 調整超連結字體大小 */
+				padding: 8px 12px; /* 調整超連結內邊距 */
+			}
+
+			h1 {
+				font-size: 3rem; /* 調整標題字體大小 */
+				top: 60%; /* 調整標題位置 */
+			}
 		}
 	</style>
 </head>
 <body>
 	<div class="container">
-		<h1>My Page
-		</h1> <!-- 文字會顯示在圖片上 -->
 		<div class="image-container">
 			<img src="picture.jpg" alt="吳奕伶的照片">
 		</div>
+
+		<div class="nav-links">
+			<a href="me.html">個人簡介</a>
+			<a href="ucan.html">職涯測驗結果</a>
+			<a href="mis.html">MIS工作</a>
+		</div>
+
+		<h1>My Page</h1>
+		
 	</div>
 
 	<footer>
-		Copyright ©  吳奕伶. All Rights Reserved.
+		Copyright © 吳奕伶. All Rights Reserved.
 	</footer>
-
 </body>
 </html>
+
+
+
+
+
 
 
 

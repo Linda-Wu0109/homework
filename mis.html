@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>吳奕伶簡介</title>
+
+    <style>
+
+         @import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC');
+
+        html, body {
+        overflow-x: hidden; /* 禁止水平滾動 */
+        max-width: 100vw; /* 限制最大寬度 */
+    }
+       
+
+        /* 設定頁面基本樣式 */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "LXGW WenKai Mono TC", sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            text-align: center;
+            background-color: #F0F0F0;
+            overflow-x: hidden;
+        }
+
+        /* 設定背景圖片區域，讓圖片滿版 */
+        .image-section, .work-section, .resume-section, .full-page-section {
+            width: 100%;
+            height: 100vh;  /* 設定為滿版高度 */
+            color: white;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center; /* 讓文字垂直水平居中 */
+        }
+
+        /* 第一頁的圖片區域 */
+        .image-section {
+            background: url('picture8.jpg') no-repeat center center;
+            background-size: cover;  /* 讓圖片填滿整個區域 */
+            cursor: pointer; /* 改變鼠標樣式，提示用戶可以點擊 */
+        }
+
+        /* 工作介紹區域的圖片 */
+        .work-section {
+            background: url('work-background.jpg') no-repeat center center;
+            background-size: cover;
+            text-align: left;  /* 文字向左對齊 */
+            padding-left: 70px;  /* 加入左邊距離 */
+            display: flex;
+            justify-content: flex-start;  /* 讓內容向左對齊 */
+            align-items: flex-start; /* 讓內容向上對齊 */
+            padding-top: 20px;
+            flex-direction: column; /* 
+            垂直排列 */
+            height: auto; /* 讓區塊變高 */
+            margin-bottom: 50px; /* 增加底部間距 */
+            min-height: 100vh;
+        }
+
+        /* 左右分區的容器 */
+        .work-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch; /* 讓區塊高度一致 */
+            
+            margin-right: 20%;
+           
+            margin-top: 3%;
+             width: 84%; /* 限制寬度，使其不超過容器的 84% */
+        }
+
+        .work-content > div {
+             height: auto;
+            min-height: unset;
+            
+
+
+        }
+
+        /* 公司介紹 */
+        .company-intro {
+            background-color: #D8D8EB;  /* 修改為鮮豔的紅色 */
+            color: white;
+
+        }
+
+        /* 基本內容 */
+        .basic-info {
+            background-color: #D1E9E9;  /* 修改為綠色 */
+            color: white;
+        }
+
+        /* 設定圖片區域內的文字樣式 */
+        h1, h2 {
+            font-size: 3em;
+            color: #fff;
+        }
+
+        /* 設定工作介紹文字顏色 */
+        .work-section h2 {
+            color: #4F4F4F;  /* 設定為金色 */
+            margin-top: 80px; /* 調整標題往下移動 */
+        }
+
+        /* 設定區塊內容 */
+        .container {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .small-heading {
+            font-size: 1.5em; /* 設定特定標題的字體大小 */
+            text-align: center; /* 讓文字置中 */
+        }
+
+        footer {
+            padding: 20px;
+            background-color: #ececec;
+            color: #4a4a4a;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-family: "LXGW WenKai Mono TC", sans-serif;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+        }
+
+
+        footer a {
+            text-decoration: none;
+            font-size: 1.2em;
+            color: #4a4a4a;
+            position: relative;
+            margin-left: 20px;
+        }
+
+        footer span {
+            margin-right: 20px;
+        }
+
+       
+
+        .work-section hr {
+            border-color: #5B5B5B;
+            width: 40%;  /* 增大寬度讓它更靠近左側 */
+            margin-left: 0%;  /* 向左移動分隔線 */
+        }
+
+        /* 修改工作內容和工作要求標題對齊方式 */
+        .company-intro h3, .basic-info h3 {
+            text-align: center;  /* 將標題文字置中 */
+            font-size: 2.5em;  /* 增大字體大小 */
+        }
+
+        .company-intro p {
+            text-align: center;  /* 文字置中 */
+            color: #4F4F4F;
+            font-size: 1.1em;  /* 增大字體大小 */
+            text-align: left;  /* 文字對齊左側 */
+            line-height: 2.3;  /* 增加行距 */
+            padding-left: 50px;
+        }
+
+        .basic-info p {
+            text-align: center;  /* 文字置中 */
+            color: #4F4F4F;
+            font-size: 1.1em;  /* 增大字體大小 */
+            text-align: left;  /* 文字對齊左側 */
+            line-height: 2.3;  /* 增加行距 */
+            padding-left: 75px;
+        }
+
+        /* 新增滿版區域樣式 */
+        .full-page-section  .full-page-section2{
+            background-color: #F0F0F0;  /* 設定背景顏色 */
+            color: white;
+            flex-direction: column;
+            min-height: 100vh;  /* 讓區塊至少滿版，但不限制內容增長 */
+            padding-bottom: 100px; /* 增加底部間距，避免內容擠在一起 */
+            padding-top:80px ;
+
+        }
+
+        .full-page-section h2 {
+            font-size: 3.8em;
+             margin-top: 50px; /* 調整為負值，將標題向上移動 */
+            margin-bottom: 20px;
+            color: #6C6C6C;
+        }
+
+        .full-page-section p {
+            font-size: 1.5em;
+            text-align: left; /* 讓文字靠左對齊 */
+             padding-left: 70px; /* 可增加左邊距，讓排版更清晰 */
+             color:#3C3C3C; /* 更改文字顏色，例如藍色 */
+             margin-top: 60px;
+
+        }
+        /* 調整圖片大小並排版 */
+        .resume-section .container img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 10px;
+        }
+        .vertical-text {
+            writing-mode: vertical-rl; /* 讓文字直排 */
+            text-orientation: upright; /* 保持字體正向 */
+            font-size: 3.8em; /* 設定適合的字體大小 */
+            letter-spacing: 10px; /* 增加字距，讓間隔好看 */
+        }
+        .full-page-section2 img {
+            width: 100%;
+            max-width: 450px;
+            height: auto;
+            margin-top: 10vh;
+        }
+
+     
+    @media (max-width: 768px) {
+        .work-content {
+        flex-direction: column;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+
+        .company-intro, .basic-info {
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .company-intro p,
+        .basic-info p {
+            padding-left: 0px; /* 移除多餘左縮進 */
+        }
+
+        h1, h2 {
+            font-size: 2em;
+        }
+
+        .full-page-section h2 {
+            font-size: 2.2em;
+            margin-top: 0;
+        }
+
+        .full-page-section p {
+            font-size: 1.2em;
+            padding-left: 20px;
+        }
+
+        footer {
+            position: relative;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        footer a {
+            position: relative;
+            margin-left: 0;
+            font-size: 1em;
+        }
+
+        footer span {
+            margin-right: 0;
+        }
+
+        .full-page-section2 img {
+            max-width: 350px;
+            margin-top: 5vh;
+        }
+        .work-section {
+        padding-left: 0; /* 手機時移除左邊距 */
+        padding-right: 0;
+        padding-top: 20px;
+        }
+    }
+
+        
+
+        
+
+    </style>
+</head>
+<body>
+
+    <!-- 第一頁圖片區域 -->
+    <a href="#work-section">
+        <div class="image-section">
+        </div>
+    </a>
+
+    <!-- 工作介紹區域 -->
+    <div id="work-section" class="work-section">
+        <h2 class="main-title">專案經理</h2>
+        <hr style="border-color: #5B5B5B;width: 34%;margin-top: -20px; /* 調整這個數值來向上移動 */">    
+
+        <!-- 左右分區的內容 -->
+        <div class="work-content">
+            <!-- 公司介紹區塊 -->
+            <div class="company-intro">
+                <h3>工作內容</h3>
+                <p> 
+                    <b class="content-text">1. 跨部門溝通梳理需求，制定最佳解決方案</b><br>
+                    <b class="content-text">2. 規劃軟體專案的藍圖，包括定義範疇、分配資源、設定時程、制定溝通策略，並規劃測試和維護工作</b><br>
+                    <b class="content-text">3. 撰寫產品規格相關文件，與專案關係人說明</b><br>
+                    <b class="content-text">4. 進行測試，確保專案達到標準並獲得客戶認可</b><br>
+                    <b class="content-text">5. 提供後期產品支持，監控產品運行狀態</b><br>
+                </p>
+            </div>
+            <!-- 基本資訊區塊 -->
+            <div class="basic-info">
+                <h3>工作要求</h3>
+                <p>
+                    <b class="content-text">1. 至少兩年以上專案管理經驗</b><br>
+                    <b class="content-text">2. 熟悉使用專案管理工具，如Jira、Trello等</b><br>
+                    <b class="content-text">3. 優秀的團隊協作和溝通能力</b><br>
+                    <b class="content-text">4. 熟練使用Office及Google套件工具</b><br>
+                    <b class="content-text">5. 良好的語言表達能力及英文讀寫能力</b><br>
+
+                    <b class="content-text"> 加分條件:
+                    1. 英語具備口說能力
+                    2. 具製造業相關實務經驗，熟製造業資訊系統及應用</b><br>
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 新增的滿版區域 -->
+    <div class="full-page-section">
+        <h2 class="main-title vertical-text">求職履歷</h2>
+         
+        <p style="line-height: 1.8;max-width: 970px"> <!-- 設定行距 -->
+            <b class="content-text"style="color: #8E8E8E  ;">我未來想做的工作是專案經理:</b><br>
+            <b class="content-text">在我的測驗中也有提到我是屬於C、E(企業、事務型)的人，在修習系上必修的課程時我也發現比起鑽研程式，我更喜歡銷售管理類方面，並且我本身也喜愛負責策劃、領導、整合等事務，因此我想往這方面發展。</b><br>
+            <b class="content-text"style="color:#8E8E8E  ;">實力養成:</b><br>
+            <b class="content-text">提升自我實力像是程式的閱讀認知、與人的溝通協調、邏輯判斷方面的能力並熟悉資訊相關的系統及應用，取得相關專案管理師證照，還有像是市場的一些專業操作流程，像是系上也有修習過的電子商務，之後也要去學習預算控管方面還有如何評估一件事的風險。</b><br>
+            <b class="content-text"style="color:#8E8E8E  ;">現有技能:</b><br>
+            <b class="content-text">程式:Java、Python(基礎)，網頁:HTML，企業資源規劃(ERP系統)</b><br>
+            
+        </p>
+    </div>
+
+
+    <section class="full-page-section2">
+    <div class="main-title">
+        <p>
+            <img src="picture9.jpg" alt="測驗圖片" style="width: 450px; height: auto;margin-top: 79px;">
+            
+        </p>
+        </div>
+    </section>
+
+    <!-- 頁腳 -->
+    <footer>
+        <a href="about.html">回到首頁</a>
+        <span>Copyright © 吳奕伶. All Rights Reserved.</span>
+    </footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		

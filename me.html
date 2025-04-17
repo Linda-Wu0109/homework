@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>吳奕伶簡介</title> 
+
+	<style>
+
+		/* 引入字體 */
+		@import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC');
+
+		html, body {
+        overflow-x: hidden; /* 禁止水平滾動 */
+        max-width: 100vw; /* 限制最大寬度 */
+    }
+		
+
+		/* 設定全頁的基本樣式 */
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: "LXGW WenKai Mono TC"!important;
+			display: flex;
+			flex-direction: column;
+			min-height: 100vh;
+			text-align: right;
+			background-color: #f0f0f0; /* 頁面背景顏色 */
+			overflow-x: hidden; /* 禁止橫向滾動條 */
+		}
+
+		.container {
+			display: flex;
+			flex-direction: column;
+			flex: 1;
+			align-items: center;  /* 使用 flexbox 讓內容居中 */
+			padding-right: 20px;
+			width: 100%;
+		}
+
+		/* 設定圖片區域的樣式 */
+		.image-section {
+			width: 100%;
+			height: 100vh;  /* 設定為滿版高度 */
+			background: url('picture2.jpg') no-repeat center center;
+			background-size: cover;
+			color: white;
+			text-align: center;
+			display: flex;
+			justify-content: center;
+			align-items: center; /* 圖片文字垂直居中 */
+		}
+
+		/* 設定區塊的樣式 */
+		.section {
+			width: 100%;  /* 控制區塊寬度為 100% */
+			padding: 40px;
+			box-sizing: border-box;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;  /* 讓內容從區塊頂部開始排列 */
+			text-align: center;
+		}
+
+		.basic-info {
+			background-color: #f4f4f9;
+			padding-left: 50px;
+		}
+
+		.basic-info img {
+			width: 150px;
+			height: auto;
+			margin-bottom: 20px;
+			border-radius: 8px;
+			margin-left:630px;  /* 圖片水平居中 */
+			
+		}
+
+		.hobbies {
+			background-color: #f9f9f9;
+			text-align: center;  /* 文字居中 */
+			padding-left: -90px;   /* 向右偏移 */
+		}
+
+		.hobbies p {
+			margin-top: 20px; /* 向下調整文本位置 */
+			padding-left: 40px;
+			font-size: 1.0em;
+		}
+
+		.hobbies img {
+			width: 120px;
+			height: auto;
+			border-radius: 8px;
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+		}
+
+		.competition {
+			background-color: #ececec;
+			display: flex;
+			align-items: center; /* 垂直居中 */
+			justify-content: flex-start; /* 水平向左對齊 */
+			padding: 20px;
+		}
+
+		.competition img {
+			width: 345px; /* 設定圖片寬度 */
+			height: auto;
+			border-radius: 8px;
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+		}
+
+		.competition p {
+			margin-top: 20px; /* 調整文字向下的位置 */
+			padding-left: 40px;
+			font-size: 1.0em;
+		}
+
+		h1, h2 {
+			text-align: center;
+			color: #5A5A5A; /* 標題文字顏色 */
+		}
+
+		h1 {
+			font-size: 3em;
+		}
+
+		h2 {
+			font-size: 2.5em;
+		}
+
+		hr {
+			width: 15%;
+			margin-top: -20px;
+			border-color: #7B7B7B;
+		}
+
+       
+
+		p, .content-text {
+			font-size: 1.2em;
+			line-height: 1.6;
+			color: #9D9D9D; /* 內容文字顏色 */
+		}
+
+		footer {
+		    padding: 20px;
+		    background-color: #ececec;
+		    color: #4a4a4a;
+		    position: fixed;
+		    bottom: 0;
+		    width: 100%;
+		    font-family: "LXGW WenKai Mono TC", sans-serif;
+		    display: flex;
+		    justify-content: space-between;
+		    align-items: center;
+		    flex-wrap: wrap;
+		    box-sizing: border-box;
+		}
+
+		footer a {
+		    text-decoration: none;
+		    font-size: 1.2em;
+		    color: #4a4a4a;
+		    position: relative;
+		    margin-left: 20px;
+		}
+
+		footer span {
+		    margin-right: 20px;
+		}
+
+
+		/* 響應式設計 - 手機版 */
+		@media (max-width: 768px) {
+			body {
+				font-size: 14px;
+			}
+
+			.container {
+				padding-right: 10px;
+			}
+
+			.basic-info img, .hobbies img, .competition img {
+				width: 100%; /* 自適應寬度 */
+				max-width: 200px; /* 設定圖片最大寬度 */
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			.basic-info {
+				padding-left: 30px;
+			}
+
+			.hobbies p, .competition p {
+				padding-left: 20px;
+				font-size: 1.2em;
+			}
+
+
+			footer {
+			    position: relative;
+			    flex-direction: column;
+			    text-align: center;
+			    align-items: center;
+			    gap: 10px;
+			}
+
+			footer a {
+			    position: relative;
+			    margin-left: 0;
+			    font-size: 1em;
+			}
+
+			footer span {
+			    margin-right: 0;
+			}
+		}
+
+		/* 響應式設計 - 小螢幕 */
+		@media (max-width: 480px) {
+			h1, h2 {
+				font-size: 2em;
+			}
+
+			.basic-info, .hobbies, .competition {
+				padding: 20px;
+			}
+
+			.basic-info img {
+				width: 100%; /* 自適應寬度 */
+				max-width: 120px;
+			}
+
+			.competition img {
+				width: 80%; /* 自適應寬度 */
+			}
+
+			footer a {
+                font-size: 1em;
+                bottom: 10px;
+            }
+		}
+	</style>
+</head>
+<body>
+	<!-- 圖片區域 -->
+	<div class="image-section">
+		<!-- 你可以在這裡放置圖片或其他內容 -->
+		<a href="#basic-info">
+			<img src="picture2.jpg" alt="背景圖片" style="cursor: pointer;">
+		</a>
+	</div>
+
+	<!-- 基本資料區 -->
+	<div class="container">
+	    <div class="section basic-info" id="basic-info">
+	        <h2 class="main-title">基本資料</h2>
+	        <hr>
+	        <p>
+	        	
+	            <b class="content-text">姓名: 吳奕伶</b><br>
+	            <b class="content-text">系級: 資管二A</b><br>
+	            <b class="content-text">學號: 411211139</b><br>
+	            <b class="content-text">信箱: linda2005aaaaa@gmail.com</b><br>
+	        </p>
+	        <img src="mepicture.jpg" alt="吳奕伶的照片">
+	    </div>
+	</div>
+
+	<!-- 興趣愛好區 -->
+	<div class="section hobbies">
+	    <h2 class="main-title">興趣愛好</h2>
+	    <hr>
+	    <p><b class="content-text">✧ 專長:企劃發想、統整資料</b></p>
+	    <p><b class="content-text">✧ 喜好:拍照、聽音樂、休閒娛樂</b></p>
+	    
+	    <img src="picture3.jpg" alt="吳奕伶的照片">
+	</div>
+
+	<!-- 參與競賽區 -->
+	<div class="section competition">
+		<h2 class="main-title">參與競賽</h2>
+		<hr>
+		<p><b class="content-text">☆ ERP規劃師(無模組)</b></p>
+		<p><b class="content-text">☆ 2024永續智慧創新黑客松競賽_智慧商務(第三名)</b></p>
+		<img src="picture4.jpg" alt="競賽圖片"> 
+	</div>
+
+	<!-- 頁腳 -->
+	<footer>
+        <a href="about.html">回到首頁</a>
+        <span>Copyright © 吳奕伶. All Rights Reserved.</span>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
